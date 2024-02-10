@@ -21,6 +21,14 @@ const UserAssets = mongoose.Schema({
         type: Number,
         required: true,
         default: 0,
+    },
+    assettype: {
+        type: String,
+        enum: ['Cash', 'Investments', 'Real Estate', 'Personal Property', 'Retirement Accounts', 'Business Ownership', 'Bitcoin', 'Others']
+    },
+    amount: {
+        type: Number,
+        default: 0,
     }
 })
 

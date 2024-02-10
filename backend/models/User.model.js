@@ -24,10 +24,6 @@ const UserSchema = mongoose.Schema(
             lowercase: true,
             trim: true
         },
-        coverimage: {
-            type: String, //* url from cloudinary
-        },
-
         //* these consist of the id's of the blogs he read
         password: {
             type: String, //* because we will decrypt the password before storing it 
@@ -41,8 +37,10 @@ const UserSchema = mongoose.Schema(
         contactno: {
             type: Number,
         },
-
-
+        retirementage: {
+            type: Number,
+            default: 60,
+        },
         refreshToken: {
             type: String,
         }
@@ -65,7 +63,6 @@ UserSchema.pre("save", async function (next) {
 UserSchema.methods.isPasswordCorrect = async function (password) {
     return await bcrypt.compare(password, this.password)
 }
-
 UserSchema.methods.generateAccessToken = function () {
     return jwt.sign({
         _id: this._id,
