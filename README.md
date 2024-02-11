@@ -62,3 +62,9 @@ Moving on to Scalability of our application, we can clearly see the addition of 
 ### Demonstrations:
 
 ![image](https://github.com/shrey7ansh07/finwiser/assets/72234861/2097e1a9-7698-47ae-81ce-f0a5de8ff90a)
+
+### Designs : 
+![image](https://github.com/shrey7ansh07/finwiser/assets/120119574/b3319d79-b7fa-4bbe-8cf8-19b15e518d9b)
+![image](https://github.com/shrey7ansh07/finwiser/assets/120119574/9a2bf683-1be7-4bca-8056-53dc94e80562)
+
+
