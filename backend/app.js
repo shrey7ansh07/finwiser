@@ -12,8 +12,11 @@ app.use(express.urlencoded({ extended: true, limit: "30kb" })) //* providing obj
 app.use(express.static("public")) //* using it to access static resources
 app.use(cookieParser()) //* cookies sent to the server via the browser are also parsed 
 
+import userRouter from "./routes/user.routes.js"
 
+//*routes declaration
 
+app.use("/api/v1/users", userRouter)
 
 
 

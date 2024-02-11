@@ -1,4 +1,4 @@
-import User from "../models/User.model.js"
+import { User } from "../models/User.model.js"
 import jwt from "jsonwebtoken"
 import { asyncHandler } from "../additionels/asyncHandler.js"
 import { ErrorDealer } from "../additionels/errorHandler.js"
@@ -32,12 +32,13 @@ const registerUser = asyncHandler(async (req, res) => {
     //* images are uploaded or not on cloudinary
     //* create an user object and save it in the db (User)
     //* response to be received back by removing the password and refresh token
-
+    console.log("reached here");
     const { username, password } = req.body //* step 1
     // console.log("email : ", email)
     if ([username, password].some((feild) => feild?.trim() === undefined)) { throw new ErrorDealer(400, "All feilds are necessary") } //* step 2
 
-    const existingUser = await User.findOne({ $or: [{ username: username }, { email: email }] })
+    console.log(username, password);
+    const existingUser = await User.findOne({ username })
     if (existingUser) { throw new ErrorDealer(409, "User with email or username already exists") }
     //* step 3
 
@@ -76,7 +77,7 @@ const loginUser = asyncHandler(async (req, res, next) => {
     if (username === undefined) { throw new ErrorDealer(418, "Enter email or username") } //* step 2
 
 
-    const user = await User.findOne({ $or: [{ username: username }, { email: email }] })
+    const user = await User.findOne({ username })
     if (!user) { throw new ErrorDealer(404, "User not found") } //* step 3
 
     const existingUser = await user.isPasswordCorrect(password)
