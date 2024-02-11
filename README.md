@@ -65,6 +65,19 @@ Moving on to Scalability of our application, we can clearly see the addition of 
 
 ### Designs : 
 ![image](https://github.com/shrey7ansh07/finwiser/assets/120119574/b3319d79-b7fa-4bbe-8cf8-19b15e518d9b)
+
 ![image](https://github.com/shrey7ansh07/finwiser/assets/120119574/9a2bf683-1be7-4bca-8056-53dc94e80562)
+
+![Screenshot from 2024-02-11 23-49-42](https://github.com/shrey7ansh07/finwiser/assets/120119737/a600c93b-ad26-4e73-9fce-91bfb91920ea)![Screenshot from 2024-02-11 23-49-52](https://github.com/shrey7ansh07/finwiser/assets/120119737/e14ce0e2-5c39-449b-aae5-604fc4b555b7)
+
+![Screenshot from 2024-02-11 23-49-48](https://github.com/shrey7ansh07/finwiser/assets/120119737/8a8b98db-a274-4d58-a38c-7d69ef4fa372)
+
+![Screenshot from 2024-02-11 23-50-27](https://github.com/shrey7ansh07/finwiser/assets/120119737/c9c80f07-1964-4715-8eb5-55c7063cd03d)
+
+
+![Screenshot from 2024-02-11 23-50-33](https://github.com/shrey7ansh07/finwiser/assets/120119737/a570377a-1e2a-4e2a-8831-de0129944831)
+
+
+![Screenshot from 2024-02-11 23-50-37](https://github.com/shrey7ansh07/finwiser/assets/120119737/36f8117f-0689-4de4-b271-476ea44f4340)
 
 
