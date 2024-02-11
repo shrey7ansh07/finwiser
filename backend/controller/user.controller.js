@@ -175,7 +175,7 @@ const refreshAccessToken = asyncHandler(async (req, res, next) => {
 const updateUser = asyncHandler(async (req, res, next) => {
     //*destructure the request
 
-    const { username, fullname, email, familysize, contactno, retirementage } = req.body
+    const { username, fullname, email, familysize, contactno, dateofbirth } = req.body
 
     //* update the user by finding him
 
@@ -184,7 +184,7 @@ const updateUser = asyncHandler(async (req, res, next) => {
             username: username,
             fullname: fullname,
             email: email,
-            retirementage: retirementage,
+            dateofbirth: dateofbirth,
             familysize: familysize,
             contactno: contactno,
         }, { new: true }).select("-password -refreshToken");

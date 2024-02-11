@@ -6,7 +6,13 @@ import {
 } from "../../../services/authService.js"
 import React from 'react'
 import Input from './Input'
+import { setAuthenticated } from '../../../store/authSlice.js'
+import { useDispatch } from 'react-redux'
+
+
+
 function Login({ handleclick, ...props }) {
+    const dispatch = useDispatch()
     const [signin, setsignin] = useState(false)
     const { register: registerlogin, handleSubmit: handlelogin, reset: resetlogin } = useForm()
     const { register: registersignin, handleSubmit: handlesignin, reset: resetsignin } = useForm()
@@ -19,7 +25,6 @@ function Login({ handleclick, ...props }) {
         try {
             const response = await loginuser(userData)
             //* reached here implies successfull login
-            console.log(response);
             // console.log(response.data);
             const user = {
                 username: response.username,
@@ -28,10 +33,11 @@ function Login({ handleclick, ...props }) {
                 userId: response._id,
                 familysize: response.familysize ? response.familysize : 1,
                 contactno: response.contactno ? response.contactno : "",
-                retirementage: response.retirementage ? response.retirementage : 60,
+                dateofbirth: response.dateofbirth ? response.dateofbirth : "",
                 //* here we have one
             }
-            console.log(user);
+            dispatch(setAuthenticated({ user: user }))
+            resetlogin()
         } catch (error) {
             console.log(error);
         }
@@ -57,7 +63,7 @@ function Login({ handleclick, ...props }) {
                 retirementage: response.retirementage ? response.retirementage : 60,
                 //* here we have one
             }
-            console.log(user);
+            setsignin(false)
         } catch (error) {
             console.log(error);
         }

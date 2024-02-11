@@ -34,9 +34,8 @@ const UserSchema = mongoose.Schema(
         contactno: {
             type: Number,
         },
-        retirementage: {
-            type: Number,
-            default: 60,
+        dateofbirth: {
+            type: String,
         },
         refreshToken: {
             type: String,

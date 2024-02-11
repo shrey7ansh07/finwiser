@@ -6,17 +6,21 @@ import { GiExpense } from "react-icons/gi";
 import { VscMilestone } from "react-icons/vsc";
 import { SlBookOpen } from "react-icons/sl";
 import { GiBookshelf } from "react-icons/gi";
+import Header from '../header/Header';
 import Btn from '../login/Btn';
+import { useSelector } from 'react-redux';
+
 
 function Home() {
     const [translate, setTranslate] = useState(false);
-
+    const isAuthenticated = useSelector(state => state.authAnduser.isAuthenticated)
     const handleClick = () => {
         setTranslate(!translate);
     }
     return (
         <div>
-            <div className='flex justify-center flex-wrap gap-[130px]'>
+            <Header />
+            <div className='flex justify-center flex-wrap gap-[70px] w-[90%] mx-auto '>
                 <Card
                     bg_check="bg-gradient-to-b from-[#727aa8] to-[#2f3a74]"
                     Heading="Policy Summarizer"
@@ -48,8 +52,10 @@ function Home() {
                     Svg={SlBookOpen}
                 ></Card>
             </div>
-            {!translate && <Btn does="LOG IN" onClick={handleClick} />}
-            {translate && <Login handleclick={handleClick} />}
+            {!isAuthenticated && <>
+                {!translate && <Btn does="LOG IN" onClick={handleClick} />}
+                {translate && <Login handleclick={handleClick} />}</>
+            }
         </div>
 
     )

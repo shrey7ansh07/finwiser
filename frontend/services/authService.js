@@ -15,7 +15,7 @@ const login = async (userData) => {
     try {
         console.log(userData);
         const response = await api.post("/api/v1/users/login", userData)
-        return response.data.data
+        return response.data.data.user
     } catch (error) {
         throw error.response.data
     }
@@ -31,7 +31,7 @@ const logoutUser = async () => {
 const updateUser = async (data) => {
     try {
         const response = await api.post("/api/v1/users/update", data)
-        return response.data.data
+        return response.data.data.user
     }
     catch {
         throw error.response.data
