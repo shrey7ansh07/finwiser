@@ -60,3 +60,5 @@ Our motto is to be the best option when it comes to financial needs. For a susta
 Moving on to Scalability of our application, we can clearly see the addition of numerous features to be a one stop solution for finance related needs. Some of them have been mentioned previously. Just as the field of finance is ever evolving so will our application. It will always be completely automated for complete privacy and with employ popular risk analysis strategies, algo-trading techniques, reinforcement learning based market analysers and many more.
     
 ### Demonstrations:
+
+![image](https://github.com/shrey7ansh07/finwiser/assets/72234861/2097e1a9-7698-47ae-81ce-f0a5de8ff90a)
